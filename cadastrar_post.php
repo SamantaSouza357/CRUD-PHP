@@ -4,12 +4,12 @@ if(!empty($_POST)){// o cadastro foi enviado ?
     include_once "conexao.php";// conexão com o BD
     
     $cmd = $con ->prepare("INSERT INTO usuario (nome,telefone,email,senha)
-    VALUES (:nome,:telefone,:email,:senha)");//preparando o comando SQL
-    $cmd-> bindParam(":nome", $_POST["nome"]);//envia o valor do título 
-    $cmd-> bindParam(":telefone", $_POST["telefone"]);//enviar o valor do texto
-    $cmd-> bindParam(":email", $_POST["email"]);//enviar o valor da imagem
-    $cmd-> bindParam(":senha", $_POST["senha"]);// enviar o valor da data 
-    $cmd-> execute();// executando o comando
+    VALUES (:nome,:telefone,:email,:senha)");
+    $cmd-> bindParam(":nome", $_POST["nome"]);
+    $cmd-> bindParam(":telefone", $_POST["telefone"]);
+    $cmd-> bindParam(":email", $_POST["email"]);
+    $cmd-> bindParam(":senha", $_POST["senha"]);
+    $cmd-> execute();// 
     echo"<script>
                 alert('DADOS CADASTRADOS COM SUCESSO!');
                 window.location='consultar.php';
