@@ -60,7 +60,7 @@ if(!empty($_POST)){// o cadastro foi enviado ?
                         </div>
                         <div class="col text-right">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-secondary mr-1" name="limpar" id="limpar">Limpar</button>
+                                <input type="reset" class="btn btn-secondary mr-1" name="limpar" id="limpar" value="Limpar">
                                 <input type='submit' value='Cadastrar' class="btn btn-success">
                             </div>
                         </div>
